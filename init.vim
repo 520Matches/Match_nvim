@@ -31,10 +31,12 @@ map <leader>h <C-w>h
 map <leader>l <C-w>l
 map <leader>j <C-w>j
 map <leader>k <C-w>k
+" map ,h <C-w>h
+" map ,l <C-w>l
+" map ,j <C-w>j
+" map ,k <C-w>k
 
 map <F5> :source ~/.vimrc<CR>
-
-"map <leader><leader> /<++><CR>:nohlsearch<CR>c4l
 
 map sh :vsplit<CR>
 map sl :vsplit<CR><C-w>l
@@ -59,8 +61,8 @@ nnoremap <silent> g9 :/^}<CR>
 " vnoremap <leader>y "+y
 " nmap <leader>p "+p
 
-map <leader>ss :mksession! ~/.vim/my.vim<cr> :wviminfo! ~/.vim/my.viminfo<cr>
-map <leader>rs :source ~/.vim/my.vim<cr> :rviminfo ~/.vim/my.viminfo<cr>
+" map <leader>ss :mksession! ~/.vim/my.vim<cr> :wviminfo! ~/.vim/my.viminfo<cr>
+" map <leader>rs :source ~/.vim/my.vim<cr> :rviminfo ~/.vim/my.viminfo<cr>
 
 map <F2> <Plug>(wildfire-fuel)
 vmap <F3> <Plug>(wildfire-water)
@@ -97,9 +99,9 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'junegunn/fzf',{'do':'./install --bin'}
 Plug 'junegunn/fzf.vim'
 
-" Plug 'vim-scripts/DfrankUtil'
-" Plug 'vim-scripts/vimprj'
-" Plug 'vim-scripts/indexer.tar.gz'
+Plug 'vim-scripts/DfrankUtil'
+Plug 'vim-scripts/vimprj'
+Plug 'vim-scripts/indexer.tar.gz'
 
 Plug 'gcmt/wildfire.vim'
 
@@ -113,6 +115,26 @@ Plug 'ianva/vim-youdao-translater'
 
 " float terminal
 Plug 'voldikss/vim-floaterm'
+
+" indentLine
+" Plug 'Yggdroot/indentLine'
+
+" vim-easymotion
+Plug 'easymotion/vim-easymotion'
+
+" vim-buffet
+Plug 'bagrat/vim-buffet'
+
+" vim-devicons
+" Plug 'ryanoasis/vim-devicons'
+
+" Plug 'airline'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+
+" defx
+" Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
+" Plug 'kristijanhusak/defx-icons'
 
 call plug#end()
 
@@ -143,16 +165,12 @@ source ~/.vim/config/vim-table-mode.conf
 
 nmap <leader>r :w<CR>:MarkdownPreview<CR>
 
-"coc====================================================
-" source ~/.vim/config/coc.conf
-
-
 "vim-scripts============================================
-"indexer
-" let g:indexer_ctagsCommandLineOptions="--c++-kinds=+p+l+x+c+d+e+f+g+m+n+s+t+u+v --fields=+iaSl --extra=+q"
+" indexer
+let g:indexer_ctagsCommandLineOptions="--c++-kinds=+p+l+x+c+d+e+f+g+m+n+s+t+u+v --fields=+iaSl --extra=+q"
 
 "junegunn/fzf==========================================
-nnoremap <silent> <Leader>f :Files<CR>
+nnoremap <silent> <Leader>F :Files<CR>
 nnoremap <silent> <Leader>b :Buffers<CR>
 
 "Ag===================================================
@@ -164,7 +182,7 @@ nnoremap <silent> <Leader>b :Buffers<CR>
 nnoremap <silent> <Leader>a :Ag<CR>
 
 " lazygit==============================================
-nnoremap <silent> <Leader>zg :! lazygit<CR>
+" nnoremap <silent> <Leader>zg :! lazygit<CR>
 
 " vim-scripts/VisIncr==================================
 source ~/.vim/config/visincr.conf
@@ -179,3 +197,15 @@ source ~/.vim/config/floaterm.conf
 
 " coc
 source ~/.vim/config/coc.conf
+
+" source ~/.vim/config/indentLine.conf
+
+" easymotion
+source ~/.vim/config/easymotion.conf
+
+" vim-buffet
+source ~/.vim/config/buffet.conf
+" use command 'bd' to close current buffer
+
+" defx
+" nmap <silent> <leader>e :Defx -columns=icons:indent:filename:type<CR>
