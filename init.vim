@@ -31,10 +31,6 @@ map <leader>h <C-w>h
 map <leader>l <C-w>l
 map <leader>j <C-w>j
 map <leader>k <C-w>k
-" map ,h <C-w>h
-" map ,l <C-w>l
-" map ,j <C-w>j
-" map ,k <C-w>k
 
 map <F5> :source ~/.vimrc<CR>
 
@@ -71,6 +67,8 @@ let g:wildfire_objects=["i'", 'i"', "i)", "i]", "i}", "i>", "ip"]
 call plug#begin('~/.vim/plugged')
 
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } , 'for' : ['markdown' , 'vim-plug'] }
+Plug 'iamcco/mathjax-support-for-mkdp'
+" Plug 'iamcco/markdown-preview.vim'
 
 Plug 'dhruvasagar/vim-table-mode'
 
@@ -126,7 +124,7 @@ Plug 'easymotion/vim-easymotion'
 Plug 'bagrat/vim-buffet'
 
 " vim-devicons
-" Plug 'ryanoasis/vim-devicons'
+Plug 'ryanoasis/vim-devicons'
 
 " Plug 'airline'
 Plug 'vim-airline/vim-airline'
@@ -135,6 +133,8 @@ Plug 'vim-airline/vim-airline-themes'
 " defx
 " Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
 " Plug 'kristijanhusak/defx-icons'
+
+Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 
 call plug#end()
 
@@ -163,8 +163,6 @@ source ~/.vim/config/markdown-preview.conf
 
 "vim-table-mode
 source ~/.vim/config/vim-table-mode.conf
-
-nmap <leader>r :w<CR>:MarkdownPreview<CR>
 
 "vim-scripts============================================
 " indexer
@@ -210,3 +208,9 @@ source ~/.vim/config/buffet.conf
 
 " defx
 " nmap <silent> <leader>e :Defx -columns=icons:indent:filename:type<CR>
+
+ 
+" vim-visual-multi
+let g:VM_maps = {}
+let g:VM_maps['Find Under']         = '<C-m>'
+let g:VM_maps['Find Subword Under'] = '<C-m>'
