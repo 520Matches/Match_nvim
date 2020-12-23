@@ -136,7 +136,7 @@ Plug 'vim-airline/vim-airline-themes'
 
 Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 
-Plug 'vim-scripts/fcitx.vim'
+Plug '520Matches/fcitx5.vim'
 
 call plug#end()
 
@@ -217,4 +217,3 @@ let g:VM_maps = {}
 let g:VM_maps['Find Under']         = '<C-m>'
 let g:VM_maps['Find Subword Under'] = '<C-m>'
 
-source ~/.vim/config/fcitx.conf
