@@ -148,6 +148,7 @@ map <leader>= :Tabularize /=<CR>
 map <leader>, :Tabularize /,<CR>
 map <leader>; :Tabularize /;<CR>
 map <leader>( :Tabularize /(<CR>
+map <leader>: :Tabularize /:<CR>
 map <leader><Space> :Tabularize /<Space><CR>
 
 
