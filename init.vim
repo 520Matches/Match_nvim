@@ -26,6 +26,8 @@ set sessionoptions="blank,buffers,globals,localoptions,tabpages,sesdir,folds,hel
 set undodir=~/.vim/.vim_undo_history/
 set undofile
 
+set clipboard+=unnamedplus
+
 let mapleader=" "
 map <leader>h <C-w>h
 map <leader>l <C-w>l
@@ -136,7 +138,11 @@ Plug 'vim-airline/vim-airline-themes'
 
 Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 
+" Plug 'lyokha/vim-xkbswitch'
+
 Plug '520Matches/fcitx5.vim'
+
+Plug 'matze/vim-move'
 
 call plug#end()
 
@@ -212,7 +218,6 @@ source ~/.vim/config/buffet.conf
 " defx
 " nmap <silent> <leader>e :Defx -columns=icons:indent:filename:type<CR>
 
- 
 " vim-visual-multi
 let g:VM_maps = {}
 let g:VM_maps['Find Under']         = '<C-m>'
