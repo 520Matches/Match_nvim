@@ -1,6 +1,6 @@
 syntax on
 
-set ts=4
+set ts=4  
 set softtabstop=4
 set shiftwidth=4
 set mouse=a
@@ -140,9 +140,13 @@ Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 
 " Plug 'lyokha/vim-xkbswitch'
 
+" Plug 'vim-scripts/fcitx.vim'
+
 Plug '520Matches/fcitx5.vim'
 
 Plug 'matze/vim-move'
+
+Plug 'APZelos/blamer.nvim'
 
 call plug#end()
 
@@ -218,8 +222,12 @@ source ~/.vim/config/buffet.conf
 " defx
 " nmap <silent> <leader>e :Defx -columns=icons:indent:filename:type<CR>
 
+ 
 " vim-visual-multi
 let g:VM_maps = {}
 let g:VM_maps['Find Under']         = '<C-m>'
 let g:VM_maps['Find Subword Under'] = '<C-m>'
 
+" APZelos/blamer.nvim
+let g:blamer_enabled = 1
+let g:blamer_show_in_insert_modes = 0
