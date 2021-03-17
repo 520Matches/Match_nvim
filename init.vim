@@ -150,6 +150,8 @@ Plug 'APZelos/blamer.nvim'
 
 Plug 'lervag/vimtex'
 
+Plug 'TaDaa/vimade'
+
 call plug#end()
 
 "cscope================================================
