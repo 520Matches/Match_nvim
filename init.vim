@@ -152,6 +152,8 @@ Plug 'lervag/vimtex'
 
 Plug 'TaDaa/vimade'
 
+Plug 'luochen1990/rainbow'
+
 call plug#end()
 
 "cscope================================================
@@ -238,3 +240,5 @@ let g:blamer_show_in_insert_modes = 0
 
 " 'lervag/vimtex'
 source ~/.vim/config/vimtex.conf
+
+let g:rainbow_active = 1
